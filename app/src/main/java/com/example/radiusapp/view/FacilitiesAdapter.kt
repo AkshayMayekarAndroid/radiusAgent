@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.radiusapp.R
 import com.example.radiusapp.model.data.Facilities
 import com.example.radiusapp.model.data.Facility
+import com.example.radiusapp.view.interfaces.UpdateListener
 
 class FacilitiesAdapter() : RecyclerView.Adapter<FacilitiesAdapter.AssetViewHolder>() {
         lateinit var facilities : Facilities
@@ -47,7 +48,8 @@ class FacilitiesAdapter() : RecyclerView.Adapter<FacilitiesAdapter.AssetViewHold
                 nameTextView.text = facility.name
                 val manager: RecyclerView.LayoutManager = LinearLayoutManager(view.context,LinearLayoutManager.HORIZONTAL,false)
                 recyclerView.layoutManager = manager
-                val facilitiesChildAdpater = FacilitiesChildAdapter(facility.facility_id,facility.options,facilities.exclusions, object : UpdateListener{
+                val facilitiesChildAdpater = FacilitiesChildAdapter(facility.facility_id,facility.options,facilities.exclusions, object :
+                    UpdateListener {
                     override fun onDataUpdate() {
                         notifyDataSetChanged()
                     }

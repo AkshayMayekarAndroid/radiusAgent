@@ -1,6 +1,5 @@
 package com.example.radiusapp.view
 
-import android.annotation.SuppressLint
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -13,9 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.radiusapp.MyApplication
 import com.example.radiusapp.R
 import com.example.radiusapp.model.data.Exclusion
-import com.example.radiusapp.model.data.Facilities
-import com.example.radiusapp.model.data.Facility
 import com.example.radiusapp.model.data.Option
+import com.example.radiusapp.view.interfaces.UpdateListener
 
 class FacilitiesChildAdapter() : RecyclerView.Adapter<FacilitiesChildAdapter.AssetViewHolder>() {
     lateinit var options: List<Option>

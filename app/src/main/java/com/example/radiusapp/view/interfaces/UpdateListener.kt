@@ -1,4 +1,4 @@
-package com.example.radiusapp.view
+package com.example.radiusapp.view.interfaces
 
 interface UpdateListener {
     fun onDataUpdate()
